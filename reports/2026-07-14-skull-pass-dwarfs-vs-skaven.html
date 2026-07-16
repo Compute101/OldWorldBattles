@@ -169,108 +169,183 @@
       </p>
 
       <figure class="report-photo">
-        <svg viewBox="0 0 900 690" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Palatino Linotype', serif" role="img" aria-label="Deployment map showing the Dwarfs in the north and Skaven in the south, with the dwarf mine in the south-west and rocky pillars in the north-east.">
+        <svg viewBox="0 0 900 750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Deployment map showing the Dwarfs in the north and Skaven in the south, with the dwarf mine in the south-west and rocky pillars in the north-east.">
           <defs>
+            <pattern id="grassHatch" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="9" stroke="#5f7a3f" stroke-width="1" opacity="0.4" />
+            </pattern>
+            <pattern id="rockHatch" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="7" stroke="#5a4a38" stroke-width="1" opacity="0.45" />
+            </pattern>
             <style>
-              .bm-field { fill: #35452b; stroke: #4a3d28; stroke-width: 2; }
-              .bm-midline { stroke: #c9a24b; stroke-width: 1.5; stroke-dasharray: 8 7; opacity: 0.55; }
-              .bm-terrain-mine { fill: #6b5a45; stroke: #4a3d28; stroke-width: 2; }
-              .bm-terrain-mine-door { fill: #2a2318; }
-              .bm-terrain-pillar { fill: #9a9186; stroke: #4a3d28; stroke-width: 1.5; }
-              .bm-obj-badge { fill: #c9a24b; stroke: #16130f; stroke-width: 1.5; }
-              .bm-dwarf-block { fill: #8a6a2f; fill-opacity: 0.85; stroke: #e6c878; stroke-width: 2; }
-              .bm-skaven-block { fill: #5c2430; fill-opacity: 0.85; stroke: #d98a8a; stroke-width: 2; }
-              .bm-unit-name { fill: #f3ead4; font-size: 16px; font-weight: bold; text-anchor: middle; }
-              .bm-unit-sub { fill: #e8ddc7; font-size: 12px; text-anchor: middle; }
-              .bm-char-star { fill: #e6c878; stroke: #16130f; stroke-width: 1; }
-              .bm-char-label { fill: #e6c878; font-size: 12.5px; font-style: italic; text-anchor: middle; }
-              .bm-compass-label { fill: #e8ddc7; font-size: 16px; font-weight: bold; text-anchor: middle; }
-              .bm-terrain-label { fill: #c7bfa8; font-size: 13px; font-style: italic; text-anchor: middle; }
-              .bm-zone-label { fill: #a89a7d; font-size: 13px; letter-spacing: 2px; text-anchor: middle; }
-              .bm-legend-text { fill: #e8ddc7; font-size: 13px; }
+              .wd-page { fill: #ece0c0; }
+              .wd-blot { fill: #b8a67c; }
+              .wd-field { fill: #8fae5f; stroke: #181008; stroke-width: 3; }
+              .wd-midline { stroke: #181008; stroke-width: 1.5; stroke-dasharray: 6 5; opacity: 0.55; }
+              .wd-mine { fill: #8a6a45; stroke: #181008; stroke-width: 2.5; }
+              .wd-mine-door { fill: #2a2015; }
+              .wd-pillar { fill: #a9a196; stroke: #181008; stroke-width: 2.5; }
+              .wd-dwarf { fill: #e8b23c; stroke: #181008; stroke-width: 3; }
+              .wd-skaven { fill: #7a2f3d; stroke: #181008; stroke-width: 3; }
+              .wd-unit-name { fill: #181008; font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 800; text-anchor: middle; letter-spacing: 0.3px; }
+              .wd-unit-sub { fill: #2a2015; font-family: Georgia, serif; font-size: 11.5px; font-style: italic; text-anchor: middle; }
+              .wd-skull { fill: #f4ecd8; stroke: #181008; stroke-width: 1.4; }
+              .wd-char-label { fill: #181008; font-family: Georgia, serif; font-size: 12.5px; font-style: italic; font-weight: bold; text-anchor: middle; }
+              .wd-obj { fill: #f4ecd8; stroke: #181008; stroke-width: 2; }
+              .wd-obj-pip { fill: #181008; }
+              .wd-compass-bg { fill: #f4ecd8; stroke: #181008; stroke-width: 2.5; }
+              .wd-terrain-label { fill: #3a2f1e; font-family: Georgia, serif; font-size: 13px; font-style: italic; text-anchor: middle; }
+              .wd-zone-label { fill: #3a2f1e; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-anchor: middle; }
+              .wd-legend-text { fill: #181008; font-family: Georgia, serif; font-size: 13px; }
+              .wd-title-text { fill: #181008; font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 900; letter-spacing: 4px; text-anchor: middle; }
+              .wd-pennant { stroke: #181008; stroke-width: 1.5; }
             </style>
           </defs>
 
-          <rect class="bm-field" x="20" y="20" width="860" height="560" rx="6" />
-          <line class="bm-midline" x1="20" y1="300" x2="880" y2="300" />
+          <!-- Parchment page -->
+          <rect class="wd-page" x="0" y="0" width="900" height="750" />
+          <ellipse class="wd-blot" cx="120" cy="680" rx="90" ry="40" opacity="0.12" />
+          <ellipse class="wd-blot" cx="800" cy="60" rx="70" ry="35" opacity="0.1" />
+          <ellipse class="wd-blot" cx="850" cy="650" rx="60" ry="50" opacity="0.1" />
+          <rect x="8" y="8" width="884" height="734" fill="none" stroke="#181008" stroke-width="2" />
+          <rect x="14" y="14" width="872" height="722" fill="none" stroke="#181008" stroke-width="1" />
 
-          <text class="bm-zone-label" x="450" y="45">DWARF DEPLOYMENT &mdash; NORTH</text>
-          <text class="bm-zone-label" x="450" y="325">SKAVEN DEPLOYMENT &mdash; SOUTH</text>
-
-          <g transform="translate(65,65)">
-            <circle r="24" fill="#1f1a13" stroke="#c9a24b" stroke-width="1.5" />
-            <line x1="0" y1="13" x2="0" y2="-14" stroke="#e6c878" stroke-width="2" />
-            <polygon points="0,-22 -6,-12 6,-12" fill="#e6c878" />
-            <text class="bm-compass-label" x="0" y="-28">N</text>
-          </g>
-
+          <!-- Title banner -->
           <g>
-            <rect class="bm-terrain-pillar" x="806" y="35" width="30" height="68" rx="14" transform="rotate(-5 821 69)" />
-            <rect class="bm-terrain-pillar" x="846" y="50" width="26" height="52" rx="13" transform="rotate(6 859 76)" />
-            <text class="bm-terrain-label" x="840" y="127" font-size="12">Pillars</text>
+            <rect x="300" y="26" width="300" height="42" rx="3" fill="#f4ecd8" stroke="#181008" stroke-width="2.5" />
+            <polygon points="300,26 280,47 300,68" fill="#f4ecd8" stroke="#181008" stroke-width="2.5" />
+            <polygon points="600,26 620,47 600,68" fill="#f4ecd8" stroke="#181008" stroke-width="2.5" />
+            <text class="wd-title-text" x="450" y="55">DEPLOYMENT</text>
           </g>
 
+          <!-- Battlefield -->
+          <rect class="wd-field" x="20" y="90" width="860" height="560" rx="4" />
+          <rect x="20" y="90" width="860" height="560" rx="4" fill="url(#grassHatch)" />
+          <line class="wd-midline" x1="20" y1="370" x2="880" y2="370" />
+
+          <text class="wd-zone-label" x="450" y="115">DWARF DEPLOYMENT &mdash; NORTH</text>
+          <text class="wd-zone-label" x="450" y="395">SKAVEN DEPLOYMENT &mdash; SOUTH</text>
+
+          <!-- Compass -->
+          <g transform="translate(65,135)">
+            <circle r="24" class="wd-compass-bg" />
+            <line x1="0" y1="13" x2="0" y2="-14" stroke="#181008" stroke-width="2.5" />
+            <polygon points="0,-22 -6,-12 6,-12" fill="#181008" />
+            <text x="0" y="-28" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="900" fill="#181008">N</text>
+          </g>
+
+          <!-- Terrain: Pillars (NE) -->
           <g>
-            <polygon class="bm-terrain-mine" points="35,520 105,485 185,498 205,535 180,573 85,580 35,555" />
-            <rect class="bm-terrain-mine-door" x="100" y="525" width="46" height="50" rx="4" />
-            <text class="bm-terrain-label" x="120" y="605">Dwarf Mine</text>
+            <rect class="wd-pillar" x="806" y="105" width="30" height="68" rx="10" transform="rotate(-5 821 139)" />
+            <rect class="wd-pillar" x="846" y="120" width="26" height="52" rx="9" transform="rotate(6 859 146)" />
+            <rect x="806" y="105" width="30" height="68" rx="10" transform="rotate(-5 821 139)" fill="url(#rockHatch)" />
+            <rect x="846" y="120" width="26" height="52" rx="9" transform="rotate(6 859 146)" fill="url(#rockHatch)" />
+            <text class="wd-terrain-label" x="840" y="197" font-size="12">Pillars</text>
           </g>
 
+          <!-- Terrain: Dwarf Mine (SW) -->
           <g>
-            <rect class="bm-dwarf-block" x="210" y="108" width="130" height="66" rx="6" />
-            <text class="bm-unit-name" x="275" y="137">5 Slayers</text>
-            <text class="bm-unit-sub" x="275" y="156">giant slayer</text>
-
-            <rect class="bm-dwarf-block" x="95" y="108" width="105" height="66" rx="6" />
-            <text class="bm-unit-name" x="148" y="137">Cannon</text>
-            <text class="bm-unit-sub" x="148" y="156">war machine</text>
+            <polygon class="wd-mine" points="35,590 105,555 185,568 205,605 180,643 85,650 35,625" />
+            <polygon points="35,590 105,555 185,568 205,605 180,643 85,650 35,625" fill="url(#rockHatch)" />
+            <rect class="wd-mine-door" x="100" y="595" width="46" height="50" rx="4" />
+            <text class="wd-terrain-label" x="120" y="675">Dwarf Mine</text>
           </g>
 
+          <!-- Dwarf Cannon + Slayers (West) -->
           <g>
-            <rect class="bm-dwarf-block" x="370" y="194" width="160" height="66" rx="6" />
-            <text class="bm-unit-name" x="450" y="223">5 Thunderers</text>
-            <text class="bm-unit-sub" x="450" y="242">handguns</text>
-            <polygon class="bm-obj-badge" points="524,198 533,207 524,216 515,207" />
+            <polygon class="wd-pennant" points="95,178 95,158 118,168" fill="#e8b23c" />
+            <rect class="wd-dwarf" x="95" y="178" width="105" height="66" rx="4" />
+            <text class="wd-unit-name" x="148" y="207">Cannon</text>
+            <text class="wd-unit-sub" x="148" y="226">war machine</text>
+
+            <polygon class="wd-pennant" points="210,178 210,158 233,168" fill="#e8b23c" />
+            <rect class="wd-dwarf" x="210" y="178" width="130" height="66" rx="4" />
+            <text class="wd-unit-name" x="275" y="207">5 Slayers</text>
+            <text class="wd-unit-sub" x="275" y="226">giant slayer</text>
           </g>
 
+          <!-- Dwarf Thunderers (Centre, holding objective) -->
           <g>
-            <rect class="bm-dwarf-block" x="630" y="108" width="190" height="66" rx="6" />
-            <text class="bm-unit-name" x="725" y="137">10 Dwarf Warriors</text>
-            <text class="bm-unit-sub" x="725" y="156">standard &amp; musician</text>
-            <polygon class="bm-char-star" points="630,103 625,114 613,114 623,121 619,133 630,125 641,133 637,121 647,114 635,114" />
-            <text class="bm-char-label" x="630" y="96">Thane Godri</text>
+            <polygon class="wd-pennant" points="370,264 370,244 393,254" fill="#e8b23c" />
+            <rect class="wd-dwarf" x="370" y="264" width="160" height="66" rx="4" />
+            <text class="wd-unit-name" x="450" y="293">5 Thunderers</text>
+            <text class="wd-unit-sub" x="450" y="312">handguns</text>
+            <g transform="translate(524,268)">
+              <rect class="wd-obj" x="-11" y="-11" width="22" height="22" rx="4" transform="rotate(45)" />
+              <circle class="wd-obj-pip" cx="-4" cy="-4" r="2" />
+              <circle class="wd-obj-pip" cx="4" cy="4" r="2" />
+              <circle class="wd-obj-pip" cx="0" cy="0" r="2" />
+            </g>
           </g>
 
+          <!-- Dwarf Warriors (East) + Thane -->
           <g>
-            <rect class="bm-skaven-block" x="90" y="400" width="200" height="66" rx="6" />
-            <text class="bm-unit-name" x="190" y="429">10 Stormvermin</text>
-            <text class="bm-unit-sub" x="190" y="448">halberds, heavy armour</text>
-            <polygon class="bm-char-star" points="285,395 290,406 302,406 292,413 296,425 285,417 274,425 278,413 268,406 280,406" />
-            <text class="bm-char-label" x="285" y="388">Skreet Verminkin</text>
+            <polygon class="wd-pennant" points="630,178 630,158 653,168" fill="#e8b23c" />
+            <rect class="wd-dwarf" x="630" y="178" width="190" height="66" rx="4" />
+            <text class="wd-unit-name" x="725" y="207">10 Dwarf Warriors</text>
+            <text class="wd-unit-sub" x="725" y="226">standard &amp; musician</text>
+            <g transform="translate(625,166)">
+              <circle r="9" class="wd-skull" />
+              <ellipse cx="-3" cy="-1" rx="2.2" ry="3" fill="#181008" />
+              <ellipse cx="3" cy="-1" rx="2.2" ry="3" fill="#181008" />
+              <polygon points="0,2 -1.4,5 1.4,5" fill="#181008" />
+            </g>
+            <text class="wd-char-label" x="625" y="150">Thane Godri</text>
           </g>
 
+          <!-- Skaven Stormvermin (West) + Chieftain -->
           <g>
-            <rect class="bm-skaven-block" x="345" y="486" width="210" height="72" rx="6" />
-            <text class="bm-unit-name" x="450" y="518">20 Clanrats</text>
-            <text class="bm-unit-sub" x="450" y="538">spears, shields &amp; clawleader</text>
-            <polygon class="bm-obj-badge" points="544,491 553,500 544,509 535,500" />
+            <polygon class="wd-pennant" points="90,470 90,450 113,460" fill="#7a2f3d" />
+            <rect class="wd-skaven" x="90" y="470" width="200" height="66" rx="4" />
+            <text class="wd-unit-name" x="190" y="499" fill="#f4ecd8">10 Stormvermin</text>
+            <text class="wd-unit-sub" x="190" y="518" fill="#e8dcc4">halberds, heavy armour</text>
+            <g transform="translate(285,468)">
+              <circle r="9" class="wd-skull" />
+              <ellipse cx="-3" cy="-1" rx="2.2" ry="3" fill="#181008" />
+              <ellipse cx="3" cy="-1" rx="2.2" ry="3" fill="#181008" />
+              <polygon points="0,2 -1.4,5 1.4,5" fill="#181008" />
+            </g>
+            <text class="wd-char-label" x="285" y="450">Skreet Verminkin</text>
           </g>
 
+          <!-- Skaven Clanrats (Centre, holding objective) -->
           <g>
-            <rect class="bm-skaven-block" x="650" y="400" width="170" height="66" rx="6" />
-            <text class="bm-unit-name" x="735" y="429">3 Rat Swarms</text>
-            <text class="bm-unit-sub" x="735" y="448">claws &amp; fangs</text>
+            <polygon class="wd-pennant" points="345,556 345,536 368,546" fill="#7a2f3d" />
+            <rect class="wd-skaven" x="345" y="556" width="210" height="72" rx="4" />
+            <text class="wd-unit-name" x="450" y="588" fill="#f4ecd8">20 Clanrats</text>
+            <text class="wd-unit-sub" x="450" y="608" fill="#e8dcc4">spears, shields &amp; clawleader</text>
+            <g transform="translate(544,561)">
+              <rect class="wd-obj" x="-11" y="-11" width="22" height="22" rx="4" transform="rotate(45)" />
+              <circle class="wd-obj-pip" cx="-4" cy="-4" r="2" />
+              <circle class="wd-obj-pip" cx="4" cy="4" r="2" />
+              <circle class="wd-obj-pip" cx="0" cy="0" r="2" />
+            </g>
           </g>
 
-          <g transform="translate(40,650)">
-            <rect x="0" y="-12" width="18" height="14" class="bm-dwarf-block" rx="3" />
-            <text class="bm-legend-text" x="24" y="0">Dwarfen Mountain Holds</text>
-            <rect x="220" y="-12" width="18" height="14" class="bm-skaven-block" rx="3" />
-            <text class="bm-legend-text" x="244" y="0">Skaven &mdash; Clan Klaw</text>
-            <polygon class="bm-char-star" transform="translate(430,-6) scale(0.7)" points="0,-11 5,0 17,0 7,7 11,19 0,11 -11,19 -7,7 -17,0 -5,0" />
-            <text class="bm-legend-text" x="446" y="0">Character</text>
-            <polygon class="bm-obj-badge" points="596,-14 605,-5 596,4 587,-5" />
-            <text class="bm-legend-text" x="614" y="0">Objective marker</text>
+          <!-- Skaven Rat Swarms (East) -->
+          <g>
+            <polygon class="wd-pennant" points="650,470 650,450 673,460" fill="#7a2f3d" />
+            <rect class="wd-skaven" x="650" y="470" width="170" height="66" rx="4" />
+            <text class="wd-unit-name" x="735" y="499" fill="#f4ecd8">3 Rat Swarms</text>
+            <text class="wd-unit-sub" x="735" y="518" fill="#e8dcc4">claws &amp; fangs</text>
+          </g>
+
+          <!-- Legend -->
+          <g transform="translate(40,700)">
+            <rect x="0" y="-13" width="20" height="16" class="wd-dwarf" rx="3" />
+            <text class="wd-legend-text" x="26" y="0">Dwarfen Mountain Holds</text>
+            <rect x="230" y="-13" width="20" height="16" class="wd-skaven" rx="3" />
+            <text class="wd-legend-text" x="256" y="0">Skaven &mdash; Clan Klaw</text>
+            <g transform="translate(452,-4)">
+              <circle r="8" class="wd-skull" />
+              <ellipse cx="-2.8" cy="-1" rx="1.9" ry="2.6" fill="#181008" />
+              <ellipse cx="2.8" cy="-1" rx="1.9" ry="2.6" fill="#181008" />
+            </g>
+            <text class="wd-legend-text" x="468" y="0">Character</text>
+            <g transform="translate(608,-6)">
+              <rect class="wd-obj" x="-9" y="-9" width="18" height="18" rx="3" transform="rotate(45)" />
+            </g>
+            <text class="wd-legend-text" x="626" y="0">Objective marker</text>
           </g>
         </svg>
         <figcaption>Deployment &mdash; the Dwarfs hold the north with Thunderers dug in on their objective, Slayers and the Cannon to the west, Warriors and Thane Godri to the east. The Skaven hold the south, Clanrats central on their own objective, Stormvermin and Skreet Verminkin to the west, Rat Swarms to the east.</figcaption>
