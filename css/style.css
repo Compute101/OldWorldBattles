@@ -1,0 +1,321 @@
+:root {
+  --bg: #16130f;
+  --bg-panel: #1f1a13;
+  --border: #4a3d28;
+  --gold: #c9a24b;
+  --gold-bright: #e6c878;
+  --text: #e8ddc7;
+  --text-dim: #a89a7d;
+  --link: #d9b25f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse at top, #2a2317 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, #100d09 0%, transparent 60%);
+  color: var(--text);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 0 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(201, 162, 75, 0.08), transparent);
+}
+
+header.site-header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  letter-spacing: 0.04em;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 #000;
+}
+
+header.site-header .subtitle {
+  margin-top: 0.5rem;
+  color: var(--text-dim);
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+nav.crumbs {
+  padding: 1rem 0 0;
+  font-size: 0.9rem;
+}
+
+nav.crumbs a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+nav.crumbs a:hover {
+  text-decoration: underline;
+}
+
+/* Intro */
+
+.intro {
+  padding: 2rem 0 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.intro p {
+  font-size: 1.08rem;
+  color: var(--text);
+}
+
+/* Section headings */
+
+h2.section-title {
+  font-size: 1.4rem;
+  color: var(--gold-bright);
+  letter-spacing: 0.03em;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Report list */
+
+.report-list {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.report-card {
+  display: block;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.1rem 1.3rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.report-card:hover {
+  border-color: var(--gold);
+  transform: translateX(2px);
+}
+
+.report-card .title {
+  font-size: 1.15rem;
+  color: var(--gold-bright);
+  font-weight: bold;
+}
+
+.report-card .meta {
+  margin-top: 0.25rem;
+  font-size: 0.88rem;
+  color: var(--text-dim);
+}
+
+.report-card .blurb {
+  margin-top: 0.4rem;
+  font-size: 0.96rem;
+}
+
+/* Report page */
+
+.report-meta {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.report-meta strong {
+  color: var(--text);
+}
+
+.matchup {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.matchup .side h3 {
+  margin: 0 0 0.25rem;
+  color: var(--gold-bright);
+  font-size: 1.05rem;
+}
+
+.matchup .side p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.92rem;
+}
+
+.matchup .vs {
+  align-self: center;
+  color: var(--gold);
+  font-weight: bold;
+  font-style: italic;
+}
+
+.report-body h2 {
+  color: var(--gold-bright);
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+.report-body h3 {
+  color: var(--gold);
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+}
+
+.report-body blockquote {
+  margin: 1.2rem 0;
+  padding: 0.6rem 1rem;
+  border-left: 3px solid var(--gold);
+  background: rgba(201, 162, 75, 0.06);
+  font-style: italic;
+  color: var(--text);
+}
+
+.report-body blockquote p {
+  margin: 0;
+}
+
+/* Army rosters */
+
+.rosters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.3rem;
+  margin: 1.5rem 0 2rem;
+}
+
+@media (max-width: 640px) {
+  .rosters {
+    grid-template-columns: 1fr;
+  }
+}
+
+.roster {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem 1.3rem;
+}
+
+.roster h3 {
+  margin-top: 0;
+  color: var(--gold-bright);
+  font-size: 1.05rem;
+}
+
+.roster .roster-meta {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin: 0 0 0.8rem;
+}
+
+.roster h4 {
+  margin: 1rem 0 0.3rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+}
+
+.roster ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.92rem;
+}
+
+.roster ul ul {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+}
+
+.roster .unit-name {
+  color: var(--text);
+}
+
+.roster .unit-pts {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+/* Score table */
+
+table.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+
+table.score-table th,
+table.score-table td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+}
+
+table.score-table th {
+  background: var(--bg-panel);
+  color: var(--gold-bright);
+}
+
+table.score-table td.num {
+  text-align: right;
+}
+
+.result-banner {
+  margin: 2rem 0;
+  padding: 1rem 1.3rem;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  background: rgba(201, 162, 75, 0.08);
+  font-size: 1.05rem;
+}
+
+.result-banner strong {
+  color: var(--gold-bright);
+}
+
+/* Footer */
+
+footer {
+  margin-top: 3rem;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  text-align: center;
+}
