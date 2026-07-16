@@ -215,7 +215,8 @@ h2.section-title {
   margin: 1.8rem 0;
 }
 
-.report-photo img {
+.report-photo img,
+.report-photo svg {
   display: block;
   width: 100%;
   height: auto;
