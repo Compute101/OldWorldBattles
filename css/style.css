@@ -190,6 +190,112 @@ h2.section-title {
   margin-top: 2rem;
 }
 
+.report-body h3 {
+  color: var(--gold);
+  font-size: 1.05rem;
+  margin-top: 1.5rem;
+}
+
+.report-body blockquote {
+  margin: 1.2rem 0;
+  padding: 0.6rem 1rem;
+  border-left: 3px solid var(--gold);
+  background: rgba(201, 162, 75, 0.06);
+  font-style: italic;
+  color: var(--text);
+}
+
+.report-body blockquote p {
+  margin: 0;
+}
+
+/* Army rosters */
+
+.rosters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.3rem;
+  margin: 1.5rem 0 2rem;
+}
+
+@media (max-width: 640px) {
+  .rosters {
+    grid-template-columns: 1fr;
+  }
+}
+
+.roster {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem 1.3rem;
+}
+
+.roster h3 {
+  margin-top: 0;
+  color: var(--gold-bright);
+  font-size: 1.05rem;
+}
+
+.roster .roster-meta {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin: 0 0 0.8rem;
+}
+
+.roster h4 {
+  margin: 1rem 0 0.3rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+}
+
+.roster ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.92rem;
+}
+
+.roster ul ul {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+}
+
+.roster .unit-name {
+  color: var(--text);
+}
+
+.roster .unit-pts {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+/* Score table */
+
+table.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+
+table.score-table th,
+table.score-table td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+}
+
+table.score-table th {
+  background: var(--bg-panel);
+  color: var(--gold-bright);
+}
+
+table.score-table td.num {
+  text-align: right;
+}
+
 .result-banner {
   margin: 2rem 0;
   padding: 1rem 1.3rem;
